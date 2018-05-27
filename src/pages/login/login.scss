@@ -1,0 +1,19 @@
+page-login {
+    .scroll-content {
+        overflow-y: hidden;
+    }
+    ion-header {
+        background: color($colors, dark, base);
+        color: color($colors, dark, contrast);
+    }
+
+    hr {
+        height: 1px !important;
+        background-color: $text-color !important;
+    }
+
+  img {
+    max-width: 80%;
+    margin-top: 20px;
+  }
+}

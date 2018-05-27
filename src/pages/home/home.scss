@@ -1,0 +1,66 @@
+page-home {
+
+  ion-content {
+    .bg-header {
+      position: relative;
+      overflow: hidden;
+      img {
+        z-index: 10;
+        position: absolute;
+        width: 100%;
+        height: auto;
+        left: 0;
+        top: 0;
+      }
+      .filter {
+        z-index: 20;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: rgba(120,40,40,.3);
+      }
+      .text {
+        position: relative;
+        z-index: 30;
+        color: #FFFFFF ;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .modif-button {
+      display: inline-block;
+      margin: 0 auto;
+    }
+    .search-button {
+      display: inline-block;
+      margin: 0 auto;
+    }
+
+    .logements {
+      background: #f7f8fa;
+    }
+
+    ion-card-content {
+      ion-icon {
+        color: #302bf3
+      }
+      ion-card-title {
+        font-weight: 600;
+      }
+      a {
+        text-transform: uppercase;
+        font-weight: 600;
+        text-decoration: none;
+        color: map_get($colors, primary);
+      }
+      p {
+        &:last-child {
+          font-style: italic;
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,145 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Logements</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content>
+
+  <ion-row class="bg-header">
+    <ion-col>
+      <img src="assets/imgs/chambre1_2.jpg" alt="">
+      <div class="filter"></div>
+      <div padding class="text">
+        <h1>Trouver des logements sur DuckBnB</h1>
+        <p no-margin>Découvrez des chambres privées ou des logements entiers, parfaitement adaptés à tout type de voyage</p>
+      </div>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-list>
+        <ion-item>
+          <ion-label>Où</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Date d'arrivée</ion-label>
+          <ion-datetime displayFormat="MMM DD, YYYY HH:mm" [(ngModel)]="myDate"></ion-datetime>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Date de départ</ion-label>
+          <ion-datetime displayFormat="MMM DD, YYYY HH:mm" [(ngModel)]="endDate"></ion-datetime>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Adultes</ion-label>
+          <ion-select [(ngModel)]="adultes">
+            <ion-option value="1">1 Adulte</ion-option>
+            <ion-option value="2">2 Adultes</ion-option>
+            <ion-option value="3">3 Adultes</ion-option>
+            <ion-option value="4">4 Adultes</ion-option>
+            <ion-option value="5">5 Adultes</ion-option>
+            <ion-option value="6">6 Adultes</ion-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Enfants</ion-label>
+          <ion-select [(ngModel)]="enfants">
+            <ion-option value="1">1 Enfant</ion-option>
+            <ion-option value="2">2 Enfants</ion-option>
+            <ion-option value="3">3 Enfants</ion-option>
+            <ion-option value="4">4 Enfants</ion-option>
+            <ion-option value="5">5 Enfants</ion-option>
+            <ion-option value="6">6 Enfants</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+
+      <div text-center>
+        <button class="search-button" ion-button padding margin-bottom round color="primary">Rechercher</button>
+      </div>
+
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <div padding-top padding-bottom class="logements">
+        <ion-card>
+          <ion-slides color="primary" pager>
+            <ion-slide style="background-color: green">
+              <img src="assets/imgs/11.jpg" alt="">
+            </ion-slide>
+            <ion-slide style="background-color: blue">
+              <img src="assets/imgs/22.jpg" alt="">
+            </ion-slide>
+            <ion-slide style="background-color: red">
+              <img src="assets/imgs/33.jpg" alt="">
+            </ion-slide>
+          </ion-slides>
+          <ion-card-content>
+            <a (click)="logementPage()" href="#">Chambre Privée | Nazelles-Négron</a>
+            <ion-card-title>Amboise Troglodyte/Chez Hélène</ion-card-title>
+            <p>98 € par nuit - Annulation Gratuite</p>
+            <p>
+              <ion-icon color="primary" name="ios-star"></ion-icon>
+              <ion-icon color="primary" name="ios-star"></ion-icon>
+              <ion-icon color="primary" name="ios-star"></ion-icon>
+              <ion-icon color="primary" name="ios-star"></ion-icon>
+              <ion-icon color="primary" name="ios-star"></ion-icon>
+              <span>356 avis client</span>
+            </p>
+            <ion-item no-padding>
+              <ion-avatar item-start>
+                <img src="assets/imgs/lorie.jpg">
+              </ion-avatar>
+              <h2>Lorie Prester</h2>
+              <p>Ta meilleure amie</p>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card>
+          <ion-slides color="primary" pager>
+            <ion-slide style="background-color: green">
+              <img src="assets/imgs/1.jpg" alt="">
+            </ion-slide>
+            <ion-slide style="background-color: blue">
+              <img src="assets/imgs/2.jpg" alt="">
+            </ion-slide>
+            <ion-slide style="background-color: red">
+              <img src="assets/imgs/3.jpg" alt="">
+            </ion-slide>
+          </ion-slides>
+          <ion-card-content>
+            <a (click)="logementbisPage()" href="#">Logement entier | Londres</a>
+            <ion-card-title>Light and Spacious Garden Flat London</ion-card-title>
+            <p>164 € par nuit - Annulation Gratuite</p>
+            <p>
+              <ion-icon color="primary" name="ios-star"></ion-icon>
+              <ion-icon color="primary" name="ios-star"></ion-icon>
+              <ion-icon color="primary" name="ios-star"></ion-icon>
+              <ion-icon color="primary" name="ios-star"></ion-icon>
+              <ion-icon color="primary" name="ios-star-half"></ion-icon>
+              <span>177 avis client</span>
+            </p>
+            <ion-item no-padding>
+              <ion-avatar item-start>
+                <img src="assets/imgs/henry.jpg">
+              </ion-avatar>
+              <h2>Henry de Sussex</h2>
+              <p>Le petit prince</p>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </ion-col>
+  </ion-row>
+
+</ion-content>
