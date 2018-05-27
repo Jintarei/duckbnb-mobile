@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 
-import { ProfilePage } from '../profile';
 /**
  * Generated class for the ModifPage page.
  *
@@ -21,5 +20,5 @@ export class ModifPage {
     gender: string = "m";
     constructor(public navCtrl: NavController) {}
     ionViewDidLoad() { console.log('ionViewDidLoad ModifPage');}
-    
+
 }
